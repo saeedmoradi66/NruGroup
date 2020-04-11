@@ -1,0 +1,79 @@
+<my-content placeholder="main">
+  <div id="div_home">
+    <div class="centrado">
+      <h1 class="center">نوین روشنا یوتاب</h1>
+      <div id="div_bannerhome">
+        <div id="slider1_container" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div *ngFor="let slider of sliderList" class="item" [ngClass]="{'active': slider.priority==1}">
+              <a href="#">
+                <img src="../../assets/img/home/{{slider.sliderPictureName}}" alt="{{slider.title}}">
+                <div class="carousel-caption">
+                  <h3>{{slider.title}}</h3>
+                </div>
+              </a>
+            </div>
+
+          </div>
+          <a class="left carousel-control" href="#slider1_container" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#slider1_container" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="botons">
+        <a href="../pdf/visor/2016/EXPRESSIONS-OF-LIGHT-VI/default.htm" title="Online Catalog" class="col-xs-4"
+          target="_blank">
+          <img src="../../assets/img/home/catalogo.png" alt="Online Catalog">
+          <h3>کاتالوگ</h3>
+        </a>
+        <a href="productos" title="Products" class="col-xs-4">
+          <img src="../../assets/img/home/productos.png" alt="Products">
+          <h3>محصولات</h3>
+        </a>
+        <a href="colecciones" title="Collections" class="none col-xs-4">
+          <img src="../../assets/img/home/colecciones.png" alt="Collections">
+          <h3>مجموعه ها</h3>
+        </a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <!--end centrado-->
+  </div>
+  <!--end div_home-->
+  <div id="div_noticias">
+    <div class="centrado">
+      <p class="titular">
+
+        آخرین خبر
+        <a [routerLink]="['/news']" title="نمایش همه خبر ها">نمایش همه خبر ها</a>
+      </p>
+      <div class="row">
+        <div class="noticia" *ngFor="let news of NewsList">
+          <a [routerLink]="['/details',news.newsId]" title="{{news.title}}">
+            <div class="informacion">
+              <p class="fecha">{{news.newsPersianDate}}</p>
+              <h2>
+                {{news.title}}
+              </h2>
+
+              <p>
+                {{news.description | slice:0:50}} ...
+              </p>
+
+            </div>
+            <img src="../../assets/img/blog/{{news.newsImage}}" alt="{{news.newsImage}}">
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <!--end centrado-->
+  </div>
+  <!--end div_noticias-->
+
+</my-content>

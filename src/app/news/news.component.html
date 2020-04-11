@@ -1,0 +1,63 @@
+<my-content placeholder="main">
+  <DIV class=centrado>
+    <DIV id=div_noticias class=row>
+      <DIV class=col-md-8>
+        <H1>خبر ها</H1>
+
+
+
+        <DIV class="noticia" *ngFor="let news of NewsList">
+          <A title="Restaurants prefer نوین روشنا یوتاب" [routerLink]="['/details',news.newsId]">
+            <DIV class=informacion>
+              <P class=fecha>{{news.newsPersianDate}}</P>
+              <h4>{{news.title}}</h4>
+              <P>{{news.description | slice:0:50}} ...</P>
+            </DIV><IMG alt="Restaurants prefer نوین روشنا یوتاب" src="../../assets/img/blog/{{news.newsImage}}">
+          </A>
+        </DIV>
+
+        <DIV id=div_paginador>
+          <div class="row text-center" *ngIf="pager.endPage>1">
+
+            <hr />
+            <ul class="pagination">
+
+              <li *ngIf="pager.currentPage > 1">
+                <a [routerLink]="['/news',1]" >اول</a>
+              </li>
+              <li *ngIf="pager.currentPage > 1">
+                <a [routerLink]="['/news',pager.currentPage-1]" >قبلی</a>
+              </li>
+
+              <!-- @for (var page = Model.StartPage; page <= Model.EndPage; page++) { -->
+              <li *ngFor="let page of pageNumberList" [ngClass]="{'active': pager.currentPage==page}">
+                <a [routerLink]="['/news',page]" routerLinkActive="router-link-active" >{{page}}</a>
+              </li>
+
+
+
+              <li *ngIf="pager.currentPage < pager.totalPages">
+                <a [routerLink]="['/news',pager.currentPage+1]" >بعدی</a>
+              </li>
+              <li *ngIf="pager.currentPage < pager.totalPages">
+                <a [routerLink]="['/news',pager.totalPages]" >آخر</a>
+              </li>
+
+            </ul>
+
+
+          </div>
+
+        </DIV>
+
+
+      </DIV>
+      <DIV class=col-md-4>
+        <app-latestnews [newsList]="NewsTopList"></app-latestnews>
+
+      </DIV>
+    </DIV>
+    <!--end div_noticias-->
+  </DIV>
+
+</my-content>
