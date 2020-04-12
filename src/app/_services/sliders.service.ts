@@ -12,7 +12,9 @@ export class SlidersService {
 
   getData() {
 
-    return this.http.get('http://localhost:49766/api/Sliders').pipe(map(result => result));
+    return this.http
+      .get('https://api.nrugroup.ir/api/Sliders')
+      .pipe(map((result) => result));
 
   }
 }
