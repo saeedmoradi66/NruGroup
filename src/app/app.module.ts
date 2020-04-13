@@ -17,6 +17,7 @@ import { NewsComponent } from './news/news.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './news/details/details.component';
 import { LatestnewsComponent } from './news/latestnews/latestnews.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
 
@@ -39,7 +40,7 @@ import { LatestnewsComponent } from './news/latestnews/latestnews.component';
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
