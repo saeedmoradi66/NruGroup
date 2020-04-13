@@ -13,7 +13,7 @@ export class SlidersService {
   getData() {
 
     return this.http
-      .get('https://api.nrugroup.ir/api/Sliders')
+      .get('http://api.nrugroup.ir/api/Sliders')
       .pipe(map((result) => result));
 
   }

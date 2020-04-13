@@ -24,10 +24,10 @@ export class Pager {
     this.endPage = endPage;
   }
 
-  totalItems;
-  currentPage;
-  pageSize;
-  totalPages;
-  startPage;
-  endPage;
+  totalItems: number;
+  currentPage: number;
+  pageSize: number;
+  totalPages: number;
+  startPage: number;
+  endPage: number;
 }

@@ -14,26 +14,26 @@ export class NewsService {
   getData() {
 
     return this.http
-      .get('https://api.nrugroup.ir/api/News/GetNewsTop')
+      .get('http://api.nrugroup.ir/api/News/GetNewsTop')
       .pipe(map((result) => result));
 
   }
 
   getNewsCount() {
 
-    return this.http.get('https://api.nrugroup.ir/api/News/NewsCount').pipe(map(result => result));
+    return this.http.get('http://api.nrugroup.ir/api/News/NewsCount').pipe(map(result => result));
 
   }
   getAll(pagesize: number, pageIndex: number) {
 
-    return this.http.get('https://api.nrugroup.ir/api/News?pageSize=' + pagesize + '&pageIndex=' + pageIndex,
+    return this.http.get('http://api.nrugroup.ir/api/News?pageSize=' + pagesize + '&pageIndex=' + pageIndex,
       ).pipe(map(result => result));
 
   }
 
   getByID(id: number) {
 
-    return this.http.get('https://api.nrugroup.ir/api/News/' + id).pipe(map(result => result));
+    return this.http.get('http://api.nrugroup.ir/api/News/' + id).pipe(map(result => result));
 
   }
 }
