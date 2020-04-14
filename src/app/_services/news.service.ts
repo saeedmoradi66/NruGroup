@@ -25,7 +25,7 @@ export class NewsService {
     return this.http
       .get(
         ShareData.DomainName +
-          'News?pageSize=' +
+          'api/News?pageSize=' +
           pagesize +
           '&pageIndex=' +
           pageIndex
