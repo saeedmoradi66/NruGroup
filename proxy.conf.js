@@ -1,6 +1,6 @@
 module.exports = {
-  "/api/*": {
-    target: "http://api.nrugroup.ir/",
+  '/api/*': {
+    target: 'https://api.nrugroup.ir/',
     secure: false,
     changeOrigin: true,
   },

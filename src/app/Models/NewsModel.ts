@@ -5,7 +5,6 @@ export class NewsModel {
    *
    */
   constructor() {
-
     this.members = new MembersModel();
   }
   newsId: number;
