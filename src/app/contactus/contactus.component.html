@@ -7,7 +7,7 @@
           Your details have been sent successfully. <br />
           <span>They will be dealt with shortly. Thank you.</span>
         </h2>
-        <form method="post" name="form" id="form" class="row" action="">
+        <form method="post"  class="row">
           <div class="columna_1 col-sm-6 col-md-6">
             <div class="direccion">
               تهران- خیابان بهار شمالی- کوچه هاله- پلاک 13 واحد 6<br />
@@ -23,50 +23,54 @@
             <div class="dreta">
               <label>
                 <input
-                  name="FirstName"
+                  name="name"
                   type="text"
                   id="firstName"
                   maxlength="50"
                   class="camp"
                   autocomplete="off"
                   placeholder="نام"
-                  required=""
+                  required
+
                 />
               </label>
               <label>
                 <input
-                  name="LastName"
+                  name="lastName"
                   type="text"
                   id="lastName"
                   maxlength="50"
                   class="camp"
                   autocomplete="off"
                   placeholder="نام خانوادگی"
-                  required=""
+                  required
+
                 />
               </label>
               <label>
                 <input
-                  name="Email"
+                  name="email"
                   type="email"
                   id="Email"
                   maxlength="50"
                   class="camp"
                   autocomplete="off"
                   placeholder="ایمیل"
-                  required=""
+                  required
+
                 />
               </label>
               <label>
                 <input
-                  name="CellPhone"
-                  type="tel"
+                  name="phone"
+                  type="text"
                   id="CellPhone"
                   maxlength="20"
                   class="camp"
                   autocomplete="off"
                   placeholder="موبایل"
-                  required=""
+                  required
+
                 />
               </label>
             </div>
@@ -74,19 +78,27 @@
 
           <div class="columna_2 col-sm-6 col-md-6">
             <textarea
-              name="Comentaris"
+              name="description"
               id="Comentaris"
               cols="10"
               rows="5"
               class="area"
               autocomplete="off"
               placeholder="پیام شما"
-              required=""
+              required
+
             ></textarea>
+
+
             <input name="Send" type="submit" id="Send" value="ارسال" />
-            <div
+            <!-- <div
               class="g-recaptcha"
               data-sitekey="6LdVdOcUAAAAABb89DrKOYdHD_1z3xohI2dAIYGL"
+            ></div> -->
+
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Le-UOkUAAAAAGk9_x0gpP6J2o1T4lP6y2uihuiX"
             ></div>
           </div>
         </form>

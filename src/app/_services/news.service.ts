@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { ShareData } from '../Models/ShareData';
+import { NewsModel } from '../Models/NewsModel';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,7 @@ import { ShareData } from '../Models/ShareData';
 export class NewsService {
   constructor(private readonly http: HttpClient) {}
 
-  getData() {
+  getData(): Observable<any> {
     return this.http
       .get(ShareData.DomainName + 'api/News/GetNewsTop')
       .pipe(map((result) => result));
@@ -21,7 +22,7 @@ export class NewsService {
       .get(ShareData.DomainName + 'api/News/NewsCount')
       .pipe(map((result) => result));
   }
-  getAll(pagesize: number, pageIndex: number) {
+  getAll(pagesize: number, pageIndex: number): Observable<any> {
     return this.http
       .get(
         ShareData.DomainName +
@@ -33,7 +34,7 @@ export class NewsService {
       .pipe(map((result) => result));
   }
 
-  getByID(id: number) {
+  getByID(id: number): Observable<any> {
     return this.http
       .get(ShareData.DomainName + 'api/News/' + id)
       .pipe(map((result) => result));

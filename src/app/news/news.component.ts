@@ -5,30 +5,33 @@ import { NewsService } from '../_services/news.service';
 import { ActivatedRoute } from '@angular/router';
 import { Pager } from '../Models/Pager';
 import { ShareData } from '../Models/ShareData';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.css']
+  styleUrls: ['./news.component.css'],
 })
 export class NewsComponent implements OnInit {
   id: number;
-  NewsList: Array<NewsModel> = null;
-  NewsTopList: Array<NewsModel> = null;
+  NewsList: NewsModel[] = null;
+  NewsTopList: NewsModel[] = null;
   newsModel: NewsModel;
   pager: Pager;
   totalRow = 0;
   pageNumberList: Array<number> = [];
-  constructor(private newsService: NewsService, private router: ActivatedRoute) {
+  constructor(
+    private newsService: NewsService,
+    private router: ActivatedRoute
+  ) {
 
-
-    this.GetNewsCount();
-
-    this.NewsTopList = ShareData.MyNewsList;
   }
 
   ngOnInit(): void {
-    this.router.params.subscribe(params => {
+    this.GetNewsCount();
+
+    this.NewsTopList = ShareData.MyNewsList;
+    this.router.params.subscribe((params) => {
       const page = this.router.snapshot.paramMap.get('id');
       // tslint:disable-next-line:use-isnan
       if (page == null) {
@@ -38,7 +41,6 @@ export class NewsComponent implements OnInit {
         this.id = parseInt(page);
       }
       this.GetNewsAll(this.id);
-
     });
   }
 
@@ -47,7 +49,7 @@ export class NewsComponent implements OnInit {
     const pageNumber = page;
 
     this.newsService.getAll(pageSize, pageNumber).subscribe(
-      (result: any) => {
+      (result) => {
         this.NewsList = result;
         let p = 0;
         this.pageNumberList = [];
@@ -55,26 +57,19 @@ export class NewsComponent implements OnInit {
         for (p = this.pager.startPage; p <= this.pager.endPage; p++) {
           this.pageNumberList.push(p);
         }
-
       },
-      error => {
+      (error) => {
         console.log(error.message);
       }
     );
   }
 
-
-
   GetNewsCount() {
-
     this.newsService.getNewsCount().subscribe(
       (result: number) => {
-
         this.totalRow = result;
-
-
       },
-      error => {
+      (error) => {
         console.log(error.message);
       }
     );

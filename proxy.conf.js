@@ -1,6 +1,6 @@
 module.exports = {
   '/api/*': {
-    target: 'https://api.nrugroup.ir/',
+    target: 'http://localhost:49766/',
     secure: false,
     changeOrigin: true,
   },

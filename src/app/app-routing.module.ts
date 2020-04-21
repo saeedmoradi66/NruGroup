@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { MasterComponent } from './master/master.component';
 import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
+import { SelectiveStrategyService } from './_services/selective-strategy.service';
+import { ProductsComponent } from './products/products.component';
 
 
 const routes: Routes = [
@@ -16,9 +18,9 @@ const routes: Routes = [
       {
         outlet: 'master',
         path: '',
-        component: HomeComponent
-      }
-    ]
+        component: HomeComponent,
+      },
+    ],
   },
   {
     path: 'about',
@@ -27,9 +29,9 @@ const routes: Routes = [
       {
         outlet: 'master',
         path: '',
-        component: AboutComponent
-      }
-    ]
+        component: AboutComponent,
+      },
+    ],
   },
   {
     path: 'contactus',
@@ -38,9 +40,9 @@ const routes: Routes = [
       {
         outlet: 'master',
         path: '',
-        component: ContactusComponent
-      }
-    ]
+        component: ContactusComponent,
+      },
+    ],
   },
   {
     path: 'news',
@@ -49,9 +51,9 @@ const routes: Routes = [
       {
         outlet: 'master',
         path: '',
-        component: NewsComponent
-      }
-    ]
+        component: NewsComponent,
+      },
+    ],
   },
   {
     path: 'news/:id',
@@ -60,9 +62,9 @@ const routes: Routes = [
       {
         outlet: 'master',
         path: '',
-        component: NewsComponent
-      }
-    ]
+        component: NewsComponent,
+      },
+    ],
   },
   {
     path: 'details/:id',
@@ -71,21 +73,35 @@ const routes: Routes = [
       {
         outlet: 'master',
         path: '',
-        component: DetailsComponent
-      }
-    ]
+        component: DetailsComponent,
+      },
+    ],
+  },
+  {
+    path: 'products/:id',
+    component: MasterComponent,
+    children: [
+      {
+        outlet: 'master',
+        path: '',
+        component: ProductsComponent,
+      },
+    ],
   },
   {
     path: '',
     redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
-  { path: '**', component: HomeComponent }
+  { path: '**', component: HomeComponent },
 ];
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+      // enableTracing: true, preloadingStrategy: SelectiveStrategyService
+     useHash: true
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

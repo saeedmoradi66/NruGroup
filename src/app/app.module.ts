@@ -17,10 +17,11 @@ import { NewsComponent } from './news/news.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './news/details/details.component';
 import { LatestnewsComponent } from './news/latestnews/latestnews.component';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
-
     AppComponent,
     HomeComponent,
     AboutComponent,
@@ -31,16 +32,20 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     ProductsComponent,
     NewsComponent,
     DetailsComponent,
-    LatestnewsComponent
+    LatestnewsComponent,
   ],
   imports: [
     MasterModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
   ],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

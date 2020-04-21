@@ -61,7 +61,8 @@
                 ><span class="hidden-xs">|</span>
               </li>
               <li>
-                <a [routerLink]="['/about']">درباره ما</a><span class="hidden-xs">|</span>
+                <a [routerLink]="['/about']">درباره ما</a
+                ><span class="hidden-xs">|</span>
               </li>
 
               <li class="menu-item dropdown" style="float: none; margin: 0;">
@@ -73,103 +74,17 @@
                   >محصولات </a
                 ><span class="hidden-xs">|</span>
                 <ul class="dropdown-menu">
-                  <li class="menu-item dropdown dropdown-submenu">
+                  <li
+                    *ngFor="let item of categoryList"
+                    class="menu-item dropdown dropdown-submenu"
+                  >
                     <a
                       class="dropdown-toggle"
                       style="background-color: #fff;"
                       data-toggle="dropdown"
-                      href="#"
-                      >پروژکتورهای LED</a
+                      [routerLink]="['/products',item.productCategoryId]"
                     >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >چراغ های دفنی LED</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >چراغ های زیرآبی LED</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >چراغ های محوطه LED</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >چراغ های خطی LED</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >پنل های LED</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >چراغ های اضطراری</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >چراغ های ریلی</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >ریسه های نوری</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >محصولات آبنمای موزیکال</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >سیستمهای کنترلی
+                      {{ item.productCategoryTitle }}
                     </a>
                   </li>
                 </ul>

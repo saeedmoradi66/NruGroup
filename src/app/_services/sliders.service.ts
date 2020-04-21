@@ -3,19 +3,17 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { ShareData } from '../Models/ShareData';
+import { SlidersModel } from '../Models/SlidersModel';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SlidersService {
+  constructor(private readonly http: HttpClient) {}
 
-  constructor(private readonly http: HttpClient) { }
-
-  getData() {
-
+  getData(): Observable<any> {
     return this.http
-      .get(ShareData.DomainName + "api/Sliders")
+      .get(ShareData.DomainName + 'api/Sliders')
       .pipe(map((result) => result));
-
   }
 }
