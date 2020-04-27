@@ -1,3 +1,24 @@
 <my-content placeholder="main">
-  <DIV class="centrado"> </DIV>
+  <DIV class="centrado">
+    <br>
+    <div class="row">
+      <div class="col-md-3" *ngFor="let product of productsList">
+        <div class="thumbnail">
+          <a [routerLink]="['/ProductDetails',product.productID]" >
+            <img
+              src="../../assets/img/products/projector/{{product.productTitle}}/{{product.thumbnailFilename}}"
+              class="img-rounded"
+              alt="Lights"
+              style="width: 100%;"
+            />
+            <div class="caption">
+              <p>
+                {{product.productTitle}}
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </DIV>
 </my-content>

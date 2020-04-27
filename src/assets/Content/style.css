@@ -3,7 +3,7 @@
     padding: 0;
     border: none;
     text-decoration: none;
-    list-style: none
+
 }
 
 body {
@@ -72,7 +72,7 @@ p, ul {
 }
 
 li {
-    list-style: none
+    /* list-style: none */
 }
 
 #div_header {
@@ -202,13 +202,13 @@ li {
     }
 
     #div_header #div_menu .col1 {
-        float: left
+        float: right
     }
 
     #div_header #div_menu .col2 {
-        float: right;
+        float: left;
         width: 60%;
-        text-align: right;
+        text-align: left;
         margin-top: 15px
     }
 

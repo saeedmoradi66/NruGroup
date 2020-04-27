@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './news/details/details.component';
 import { LatestnewsComponent } from './news/latestnews/latestnews.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NewsComponent,
     DetailsComponent,
     LatestnewsComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     MasterModule,

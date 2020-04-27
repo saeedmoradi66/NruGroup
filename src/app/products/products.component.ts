@@ -32,6 +32,7 @@ export class ProductsComponent implements OnInit {
   GetProducts(id: number) {
     this.productService.getByProductCategory(id).subscribe(
       (result) => {
+        console.log(result);
         this.productsList = result;
       },
       (error) => {

@@ -14,14 +14,12 @@
       <span class="icon-bar"></span>
     </button>
 
-    <a
-      href=""
-      title="نوین روشنا یوتاب"
-      class="navbar-brand visible-xs col-xs-6 hidden"
+    <a href="" title="نوین روشنا یوتاب" class="navbar-brand visible-xs col-xs-6"
       ><img
-        src="../assets/img/content/logo-milan.png"
+        src="../assets/img/logo-m.png"
         alt="نوین روشنا یوتاب"
-        class="logo hidden"
+        class="logo"
+        height="100px"
     /></a>
   </div>
 
@@ -31,10 +29,8 @@
         <div class="centrado">
           <div id="div_menu">
             <div class="col1">
-              <a href="" title="نوین روشنا یوتاب" class="hidden-xs hidden"
-                ><img
-                  src="../assets/img/content/logo-milan.png"
-                  alt="نوین روشنا یوتاب"
+              <a href="" title="نوین روشنا یوتاب" class="hidden-xs"
+                ><img src="../assets/img/logo.png" alt="نوین روشنا یوتاب"
               /></a>
             </div>
             <div class="col2">
@@ -82,7 +78,8 @@
                       class="dropdown-toggle"
                       style="background-color: #fff;"
                       data-toggle="dropdown"
-                      [routerLink]="['/products',item.productCategoryId]"
+                      [routerLink]="['/products', item.productCategoryId]"
+                      routerLinkActive="router-link-active"
                     >
                       {{ item.productCategoryTitle }}
                     </a>

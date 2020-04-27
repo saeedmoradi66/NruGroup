@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
 import { SelectiveStrategyService } from './_services/selective-strategy.service';
 import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 const routes: Routes = [
@@ -85,6 +86,17 @@ const routes: Routes = [
         outlet: 'master',
         path: '',
         component: ProductsComponent,
+      },
+    ],
+  },
+  {
+    path: 'ProductDetails/:id',
+    component: MasterComponent,
+    children: [
+      {
+        outlet: 'master',
+        path: '',
+        component: ProductDetailsComponent,
       },
     ],
   },
