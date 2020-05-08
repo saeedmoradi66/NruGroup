@@ -16,7 +16,7 @@
 
     <a href="" title="نوین روشنا یوتاب" class="navbar-brand visible-xs col-xs-6"
       ><img
-        src="../assets/img/logo-m.png"
+        src="../assets/img/logo1.png"
         alt="نوین روشنا یوتاب"
         class="logo"
         height="100px"
@@ -30,17 +30,17 @@
           <div id="div_menu">
             <div class="col1">
               <a href="" title="نوین روشنا یوتاب" class="hidden-xs"
-                ><img src="../assets/img/logo.png" alt="نوین روشنا یوتاب"
+                ><img src="../assets/img/logo1.png" alt="نوین روشنا یوتاب"
               /></a>
             </div>
-            <div class="col2">
+            <!-- <div class="col2">
               <form method="post" id="formBusc" name="formBusc" action="#">
                 <input
                   name="search"
                   type="text"
                   id="search"
                   maxlength="80"
-                  placeholder="جستجو محصول"
+                  placeholder="جستجو "
                 />
                 <input
                   name="Busc"
@@ -49,7 +49,7 @@
                   src="../assets/img/content/lupa.png"
                 />
               </form>
-            </div>
+            </div> -->
             <div class="clear"></div>
             <ul class="menu">
               <li>
@@ -87,7 +87,7 @@
                 </ul>
               </li>
               <li>
-                <a href="" title="پروژه های شرکت">پروژه های شرکت</a
+                <a href="" title="پروژه ها">پروژه ها </a
                 ><span class="hidden-xs">|</span>
               </li>
               <li class="menu-item dropdown" style="float: none; margin: 0;">
@@ -129,14 +129,30 @@
                 </ul>
               </li>
               <li>
-                <a [routerLink]="['/contactus']" title="ارتباط با ما"
-                  >ارتباط با ما</a
-                ><span class="hidden-xs">|</span>
-              </li>
-
-              <li>
                 <a href="#" title="سفارش محصول">سفارش محصول</a
                 ><span class="hidden-xs">|</span>
+              </li>
+              <li>
+                <a [routerLink]="['/contactus']" title="تماس با ما"
+                  >تماس با ما</a
+                >
+              </li>
+              <li>
+                <form method="post" id="formBusc" name="formBusc" action="#">
+                  <input
+                    name="search"
+                    type="text"
+                    id="search"
+                    maxlength="80"
+                    placeholder="جستجو "
+                  />
+                  <input
+                    name="Busc"
+                    id="Busc"
+                    type="image"
+                    src="../assets/img/content/lupa.png"
+                  />
+                </form>
               </li>
             </ul>
           </div>

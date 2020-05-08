@@ -9,6 +9,7 @@ import { NewsComponent } from './news/news.component';
 import { SelectiveStrategyService } from './_services/selective-strategy.service';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductCategoryComponent } from './product-category/product-category.component';
 
 
 const routes: Routes = [
@@ -53,6 +54,17 @@ const routes: Routes = [
         outlet: 'master',
         path: '',
         component: NewsComponent,
+      },
+    ],
+  },
+  {
+    path: 'category',
+    component: MasterComponent,
+    children: [
+      {
+        outlet: 'master',
+        path: '',
+        component: ProductCategoryComponent,
       },
     ],
   },

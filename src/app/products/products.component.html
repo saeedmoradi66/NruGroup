@@ -1,22 +1,32 @@
 <my-content placeholder="main">
   <DIV class="centrado">
-    <br>
-    <div class="row">
-      <div class="col-md-3" *ngFor="let product of productsList">
-        <div class="thumbnail">
-          <a [routerLink]="['/ProductDetails',product.productID]" >
-            <img
-              src="../../assets/img/products/projector/{{product.productTitle}}/{{product.thumbnailFilename}}"
-              class="img-rounded"
-              alt="Lights"
-              style="width: 100%;"
-            />
-            <div class="caption">
-              <p>
-                {{product.productTitle}}
-              </p>
+    <br />
+    <div class="panel panel-default">
+      <div class="panel-heading" *ngIf="productsList.length>0">
+        {{ productsList[0].productCategory.productCategoryTitle }}
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <app-spinner [show]="showProducts"></app-spinner>
+          <div class="col-md-2" *ngFor="let product of productsList">
+            <div class="thumbnail">
+              <a [routerLink]="['/ProductDetails', product.productID]">
+                <img
+                  src="../../assets/img/products/{{
+                    product.productCategory.folderName
+                  }}/{{ product.productTitle }}/{{ product.thumbnailFilename }}"
+                  class="img-responsive img-rounded"
+                  alt="Lights"
+                  style="width: 100%;"
+                />
+                <div class="caption">
+                  <p>
+                    {{ product.productTitle }}
+                  </p>
+                </div>
+              </a>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </div>

@@ -15,25 +15,24 @@ export class ProductsComponent implements OnInit {
   ) {}
   id: number;
   productsList: Products[];
+  showProducts = false;
   ngOnInit(): void {
     this.router.params.subscribe((params) => {
       const page = this.router.snapshot.paramMap.get('id');
-      // tslint:disable-next-line:use-isnan
-      if (page == null) {
-        this.id = 1;
-      } else {
-        // tslint:disable-next-line: radix
+      if (page != null) {
         this.id = parseInt(page);
+        this.GetProducts(this.id);
       }
     });
-    this.GetProducts(this.id);
   }
 
   GetProducts(id: number) {
+    this.showProducts = true;
     this.productService.getByProductCategory(id).subscribe(
       (result) => {
         console.log(result);
-        this.productsList = result;
+        this.productsList = result.sort();
+        this.showProducts = false;
       },
       (error) => {
         console.log(error.message);

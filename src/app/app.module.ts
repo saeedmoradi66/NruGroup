@@ -19,7 +19,11 @@ import { DetailsComponent } from './news/details/details.component';
 import { LatestnewsComponent } from './news/latestnews/latestnews.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-
+import { SpinnerComponent } from './utility/spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatInputModule } from '@angular/material/input';
+import { ProductCategoryComponent } from './product-category/product-category.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     DetailsComponent,
     LatestnewsComponent,
     ProductDetailsComponent,
+    SpinnerComponent,
+    ProductCategoryComponent,
   ],
   imports: [
     MasterModule,
@@ -46,6 +52,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
+    BrowserAnimationsModule,
+    MatProgressBarModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
