@@ -2,7 +2,7 @@ import { Products } from './ProductsModel';
 
 export class ProductDetailsModel {
     productDetailsID: number;
-    pictureName: string;
+    picAddress: string;
     title: string;
     typeTitle: string;
     brand: string;
@@ -18,5 +18,5 @@ export class ProductDetailsModel {
     bodyMaterial: string;
     dimensions: string;
     catalogName: string;
-    products: Products;
+    product: Products;
 }

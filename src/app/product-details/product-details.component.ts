@@ -15,7 +15,7 @@ export class ProductDetailsComponent implements OnInit {
     private productDetailsService: ProductdetailsService
   ) { }
   id: number;
-  productDetailsList: ProductDetailsModel[];
+  productDetails: ProductDetailsModel = null;
   showProducts = false;
   ngOnInit(): void {
     this.router.params.subscribe(() => {
@@ -31,8 +31,12 @@ export class ProductDetailsComponent implements OnInit {
     this.showProducts = true;
     this.productDetailsService.getByProductID(id).subscribe(
       (result) => {
-
-        this.productDetailsList = result.sort();
+        if (result != null)
+        {
+          this.productDetails = result;
+        }
+        
+       
         this.showProducts = false;
       },
       (error) => {

@@ -1,0 +1,12 @@
+.col-title{
+    color:#b5b5b5
+}
+.col-value{
+    color:#444
+}
+.row-detail{
+    border-bottom: 1px solid #b5b5b5;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
