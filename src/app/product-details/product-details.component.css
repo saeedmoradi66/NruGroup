@@ -1,8 +1,11 @@
 .col-title{
-    color:#b5b5b5
+    color:#b5b5b5;
+    float: right;
+    padding-left: 10px;
 }
 .col-value{
-    color:#444
+    color:#444;
+    float: right;
 }
 .row-detail{
     border-bottom: 1px solid #b5b5b5;
