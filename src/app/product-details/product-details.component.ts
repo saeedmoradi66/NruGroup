@@ -31,12 +31,11 @@ export class ProductDetailsComponent implements OnInit {
     this.showProducts = true;
     this.productDetailsService.getByProductID(id).subscribe(
       (result) => {
-        if (result != null)
-        {
+        if (result != null) {
           this.productDetails = result;
         }
-        
-       
+
+
         this.showProducts = false;
       },
       (error) => {
