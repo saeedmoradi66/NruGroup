@@ -35,8 +35,8 @@
               "src/assets/Scripts/jquery-1.12.4.min.js",
               "src/assets/Scripts/bootstrap.min.js",
               "src/assets/Scripts/respond.min.js",
-              "src/assets/Scripts/persianumber.js",
-              "src/assets/Scripts/nru.js"
+              "src/assets/Scripts/persianumber.js"
+              
             ]
           },
           "configurations": {
