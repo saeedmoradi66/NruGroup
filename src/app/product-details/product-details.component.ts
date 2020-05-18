@@ -27,6 +27,7 @@ export class ProductDetailsComponent implements OnInit {
     });
   }
 
+  
   GetProductDetails(id: number) {
     this.showProducts = true;
     this.productDetailsService.getByProductID(id).subscribe(
