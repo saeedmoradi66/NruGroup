@@ -43,6 +43,7 @@ import { ProductCategoryComponent } from './product-category/product-category.co
     ProductCategoryComponent,
   ],
   imports: [
+    
     MasterModule,
     FormsModule,
     ReactiveFormsModule,
