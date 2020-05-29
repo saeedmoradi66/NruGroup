@@ -27,7 +27,7 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/assets/Content/font.css",
-              "src/assets/Content/bootstrap.min.css",
+              "src/assets/Content/bootstrap-rtl.min.css",
               "src/assets/Content/font-awesome.min.css"
             ],
             "scripts": [
