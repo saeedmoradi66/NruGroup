@@ -1,29 +1,44 @@
 <my-content placeholder="main">
-  <div class="centrado">
-    <div id="div_noticias" class="row">
-      <div class="col-md-8">
-        <a [routerLink]="['/news']" class="tornar">برگشت به لیست خبر ها</a>
-        <div class="ficha-noticia">
-          <div class="informacion">
-            <p class="fecha">{{newsModel.newsPersianDate}}</p>
+  <div class="card" dir="rtl" style="text-align: right;padding: 10px;">
+    <div class="card-header" id="headingOne">
+      <h3 class="mb-0">
 
-            <h2>{{newsModel.title}}</h2>
-            <img class="img-responsive img-rounded" src="../../assets/img/blog/{{newsModel.newsImage}}" alt="{{newsModel.title}}">
-            <br />
-            <div style="font-size:14px;" class="text-justify">
+        {{newsModel.title}}
 
-              {{newsModel.description}}
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <DIV class=col-md-4>
-        <app-latestnews [newsList]="NewsTopList"></app-latestnews>
-
-      </DIV>
+      </h3>
     </div>
-    <!--end div_noticias-->
+
+
+    <div class="card-body">
+
+      <div class="row">
+        <div class=col-sm-3>
+          <app-latestnews [newsList]="NewsTopList"></app-latestnews>
+
+        </div>
+        <div class="col-sm-9">
+<div class="row justify-content-center align-items-center">{{newsModel.newsPersianDate}}</div>
+          <div class="row justify-content-center align-items-center">
+           
+            
+            <h2>{{newsModel.title}}</h2>
+
+            <img class="img-fluid rounded" src="../../assets/img/blog/{{newsModel.newsImage}}"
+              alt="{{newsModel.title}}">
+
+            <br />
+
+
+            {{newsModel.description}}
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
   </div>
 </my-content>

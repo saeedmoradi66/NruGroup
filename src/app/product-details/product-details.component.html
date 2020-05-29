@@ -1,170 +1,178 @@
 <my-content placeholder="main">
-    <DIV class="centrado">
-        <br />
-        <div class="panel panel-default" *ngIf="productDetails!=null">
-            <div class="panel-heading text-center" style="font-size: 20px;">
-                <strong> NRU-{{productDetails.product.productTitle}} </strong>
-            </div>
-            <div class="panel-body">
-                <app-spinner [show]="showProducts"></app-spinner>
-                
-                <div class="row">
-                    <div class="col-sm-3" style="padding-top: 14%;">
+    <div class="card" dir="rtl" style="text-align: right;padding: 10px;">
+        <div class="card-header" id="headingOne" *ngIf="productDetails!=null">
+            <h3 class="mb-0">
 
-                        <img class="img img-responsive"
-                            src='../../assets/img/products/{{productDetails.product.productCategory.folderName}}/{{productDetails.product.productTitle}}/{{productDetails.product.thumbnailFilename}}'>
-                    </div>
-                    <div class="col-sm-9">
-                        <img class="img img-responsive"
-                            src='../../assets/img/products/{{productDetails.product.productCategory.folderName}}/{{productDetails.product.productTitle}}/{{productDetails.picAddress}}'>
-                    </div>
+                NRU-{{productDetails.product.productTitle}}
+
+            </h3>
+        </div>
+        <div class="card-body">
+            <br>
+            <div *ngIf="productDetails!=null">
+                <div class="row justify-content-center" style="font-size: 20px;">
+                    <strong> NRU-{{productDetails.product.productTitle}} </strong>
                 </div>
-                <hr>
-                <div class="row row-detail" dir="rtl">
-                    <div class="col-sm-2 col-title">
-                        کاربرد
+                <div>
+                    <app-spinner [show]="showProducts"></app-spinner>
+
+                    <div class="row" style="padding: 10px;">
+                        <div class="col-sm-3" style="padding-top: 14%;">
+
+                            <img class="img-fluid"
+                                src='../../assets/img/products/{{productDetails.product.productCategory.folderName}}/{{productDetails.product.productTitle}}/{{productDetails.product.thumbnailFilename}}'>
+                        </div>
+                        <div class="col-sm-9">
+                            <img class="img-fluid"
+                                src='../../assets/img/products/{{productDetails.product.productCategory.folderName}}/{{productDetails.product.productTitle}}/{{productDetails.picAddress}}'>
+                        </div>
                     </div>
-                    <div class="col-sm-10 col-value">
-                        {{productDetails.title}}
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                زاویه تابش
-                            </div>
-                            <div class="col-sm-8 col-value">
-
-                                {{productDetails.angle}}
-                            </div>
-
+                    <hr>
+                    <div class="row row-detail" style="padding: 10px;" dir="rtl">
+                        <div class="col-sm-2 col-title text-right">
+                            کاربرد
                         </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                محدوده دمای کارکرد
-                            </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.temperature}}
-                            </div>
-
-                        </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                رنگ نور
-                            </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.color}}
-                            </div>
-
-                        </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                درجه حفاظت
-                            </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.degreeOfProtection}}
-                            </div>
-
-                        </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                طول عمر اسمی
-                            </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.longevity}}
-                            </div>
-
-                        </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                جنس بدنه
-                            </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.bodyMaterial}}
-                            </div>
-
+                        <div class="col-sm-10 col-value text-right">
+                            {{productDetails.title}}
                         </div>
 
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="row" style="padding: 10px;">
+                        <div class="col-sm-6">
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    زاویه تابش
+                                </div>
+                                <div class="col-sm-8 col-value  text-right">
 
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                نوع لامپ
+                                    {{productDetails.angle}}
+                                </div>
+
                             </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.typeTitle}}
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title  text-right">
+                                    محدوده دمای کارکرد
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.temperature}}
+                                </div>
+
+                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    رنگ نور
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.color}}
+                                </div>
+
+                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    درجه حفاظت
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.degreeOfProtection}}
+                                </div>
+
+                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    طول عمر اسمی
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.longevity}}
+                                </div>
+
+                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    جنس بدنه
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.bodyMaterial}}
+                                </div>
+
                             </div>
 
                         </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                برند LED
-                            </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.brand}}
-                            </div>
 
-                        </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                تعداد LED
-                            </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.qty}}
-                            </div>
+                        <div class="col-sm-6">
 
-                        </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                توان نامی
-                            </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.power}}
-                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    نوع لامپ
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.typeTitle}}
+                                </div>
 
-                        </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                بهره نوری
                             </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.opticalGain}}
-                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    برند LED
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.brand}}
+                                </div>
 
-                        </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                ولتاژ ورودی
                             </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.voltage}}
-                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    تعداد LED
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.qty}}
+                                </div>
 
-                        </div>
-                        <div class="row row-detail">
-                            <div class="col-sm-4 col-title">
-                                ابعاد
                             </div>
-                            <div class="col-sm-8 col-value">
-                                {{productDetails.dimensions}}
-                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    توان نامی
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.power}}
+                                </div>
 
+                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    بهره نوری
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.opticalGain}}
+                                </div>
+
+                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    ولتاژ ورودی
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.voltage}}
+                                </div>
+
+                            </div>
+                            <div class="row row-detail">
+                                <div class="col-sm-4 col-title text-right">
+                                    ابعاد
+                                </div>
+                                <div class="col-sm-8 col-value text-right">
+                                    {{productDetails.dimensions}}
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-center">
-                    <a
-                        href="../../assets/img/products/{{productDetails.product.productCategory.folderName}}/{{productDetails.product.productTitle}}/{{productDetails.catalogName}}">
-                        <img src="../../assets/img/pdf.png" /> دانلود دیتاشیت
-                    </a>
+                    <div class="row justify-content-center">
+                        <a
+                            href="../../assets/img/products/{{productDetails.product.productCategory.folderName}}/{{productDetails.product.productTitle}}/{{productDetails.catalogName}}">
+                            <img src="../../assets/img/pdf.png" /> دانلود دیتاشیت
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </DIV>
-
+    </div>
 </my-content>

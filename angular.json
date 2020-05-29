@@ -28,15 +28,11 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/assets/Content/font.css",
               "src/assets/Content/bootstrap.min.css",
-              "src/assets/Content/style_bootstrap.css",
-              "src/assets/Content/style.css"
+              "src/assets/Content/font-awesome.min.css"
             ],
             "scripts": [
-              "src/assets/Scripts/jquery-1.12.4.min.js",
-              "src/assets/Scripts/bootstrap.min.js",
-              "src/assets/Scripts/respond.min.js",
-              "src/assets/Scripts/persianumber.js"
-              
+              "src/assets/Scripts/jquery.min.js",
+              "src/assets/Scripts/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -58,13 +54,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
+                  "maximumWarning": "4mb",
                   "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "30kb",
+                  "maximumError": "50kb"
                 }
               ],
               "serviceWorker": true,
@@ -102,8 +98,8 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              
             ],
             "scripts": []
           }
@@ -116,7 +112,9 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {

@@ -1,34 +1,42 @@
 <my-content placeholder="main">
-  <DIV class="centrado">
-    <br />
-    <div class="panel panel-default">
-      <div class="panel-heading">
+
+  <div class="card" dir="rtl" style="text-align: right;padding: 10px;">
+    <div class="card-header" id="headingOne">
+      <h3 class="mb-0">
+
         محصولات
-      </div>
-      <div class="panel-body">
-        <div class="row">
+
+        </h3>
+    </div>
+
+    
+      <div class="card-body">
+        <div class="row " style="padding: 10px;margin: 10px;text-align: center;">
           <app-spinner [show]="showCategory"></app-spinner>
-          <div class="col-md-2" *ngFor="let product of categoryList">
-            <div class="thumbnail">
-              <a [routerLink]="['/products', product.productCategoryId]">
-                <img
-                  src="../../assets/img/products/{{ product.folderName }}/{{
-                    product.fileName
-                  }}"
-                  class="img-responsive img-rounded"
-                  alt="Lights"
-                  style="width: 100%;"
-                />
-                <div class="caption1" style="padding-top:9px">
-                  <p>
-                    {{ product.productCategoryTitle }}
-                  </p>
-                </div>
-              </a>
-            </div>
+          <div class="col-sm-2 text-center card1" *ngFor="let product of categoryList">
+
+
+            <a [routerLink]="['/products', product.productCategoryId]">
+
+              <img src="../../assets/img/products/{{ product.folderName }}/{{
+                          product.fileName
+                        }}" class="img-fluid rounded" alt="Lights" style="width: 100%;" />
+
+              <h4>
+                {{ product.productCategoryTitle }}
+              </h4>
+
+
+
+
+
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </DIV>
+ 
+
+
+
 </my-content>

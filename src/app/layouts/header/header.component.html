@@ -1,164 +1,76 @@
-<header class="navbar navbar-default">
-  <div class="navbar-header">
-    <button
-      type="button"
-      class="navbar-toggle collapsed"
-      data-toggle="collapse"
-      data-target="#navbar"
-      aria-expanded="false"
-      aria-controls="navbar"
-    >
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
+<div class="jumbotron text-center img-fluid"
+  style="margin-bottom: 0;background-image: url('../assets/img/background-header.jpg');">
+  <div class="row">
+    <div class="col-sm-1">
+      <img src="../assets/img/logo2.png" />
+    </div>
+    <div class="col-sm-11" style="padding-top: 20px;">
+      <h1 style="color:white">نوین روشنا یوتاب</h1>
 
-    <a href="" title="نوین روشنا یوتاب" class="navbar-brand visible-xs col-xs-6"
-      ><img
-        src="../assets/img/logo1.png"
-        alt="نوین روشنا یوتاب"
-        class="logo"
-        height="100px"
-    /></a>
-  </div>
-
-  <div id="navbar" class="collapse navbar-collapse navbar-right">
-    <div class="nav navbar-nav">
-      <div id="div_header">
-        <div class="centrado">
-          <div id="div_menu">
-            <div class="col1">
-              <a href="" title="نوین روشنا یوتاب" class="hidden-xs"
-                ><img src="../assets/img/logo1.png" alt="نوین روشنا یوتاب"
-              /></a>
-            </div>
-            <!-- <div class="col2">
-              <form method="post" id="formBusc" name="formBusc" action="#">
-                <input
-                  name="search"
-                  type="text"
-                  id="search"
-                  maxlength="80"
-                  placeholder="جستجو "
-                />
-                <input
-                  name="Busc"
-                  id="Busc"
-                  type="image"
-                  src="../assets/img/content/lupa.png"
-                />
-              </form>
-            </div> -->
-            <div class="clear"></div>
-            <ul class="menu">
-              <li>
-                <a [routerLink]="['/home']">خانه</a
-                ><span class="hidden-xs">|</span>
-              </li>
-              <li>
-                <a [routerLink]="['/about']">درباره ما</a
-                ><span class="hidden-xs">|</span>
-              </li>
-
-              <li class="menu-item dropdown" style="float: none; margin: 0;">
-                <a
-                  href="#"
-                  class="dropdown-toggle"
-                  style="background-color: #fff;"
-                  data-toggle="dropdown"
-                  >محصولات </a
-                ><span class="hidden-xs">|</span>
-                <ul class="dropdown-menu">
-                  <li
-                    *ngFor="let item of categoryList"
-                    class="menu-item dropdown dropdown-submenu"
-                  >
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      [routerLink]="['/products', item.productCategoryId]"
-                      routerLinkActive="router-link-active"
-                    >
-                      {{ item.productCategoryTitle }}
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="" title="پروژه ها">پروژه ها </a
-                ><span class="hidden-xs">|</span>
-              </li>
-              <li class="menu-item dropdown" style="float: none; margin: 0;">
-                <a
-                  href="#"
-                  class="dropdown-toggle"
-                  style="background-color: #fff;"
-                  data-toggle="dropdown"
-                  >پژوهش ها و رویدادها </a
-                ><span class="hidden-xs">|</span>
-                <ul class="dropdown-menu">
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href=""
-                      >اخبار</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >مقالات</a
-                    >
-                  </li>
-                  <li class="menu-item dropdown dropdown-submenu">
-                    <a
-                      class="dropdown-toggle"
-                      style="background-color: #fff;"
-                      data-toggle="dropdown"
-                      href="#"
-                      >دانلود ها</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" title="سفارش محصول">سفارش محصول</a
-                ><span class="hidden-xs">|</span>
-              </li>
-              <li>
-                <a [routerLink]="['/contactus']" title="تماس با ما"
-                  >تماس با ما</a
-                >
-              </li>
-              <li>
-                <form method="post" id="formBusc" name="formBusc" action="#">
-                  <input
-                    name="search"
-                    type="text"
-                    id="search"
-                    maxlength="80"
-                    placeholder="جستجو "
-                  />
-                  <input
-                    name="Busc"
-                    id="Busc"
-                    type="image"
-                    src="../assets/img/content/lupa.png"
-                  />
-                </form>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- end centrado -->
-      </div>
     </div>
   </div>
-</header>
+
+</div>
+<nav class="navbar navbar-expand-sm navbar-dark  bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#" dideo-checked="true">نوین روشنا یوتاب</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+      aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample07">
+      <ul class="navbar-nav mr-auto justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']" dideo-checked="true">خانه <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']" dideo-checked="true">درباره ما</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown07" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" dideo-checked="true">
+            محصولات</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown07">
+            <a class="dropdown-item" *ngFor="let item of categoryList" dideo-checked="true"
+              [routerLink]="['/products', item.productCategoryId]" routerLinkActive="router-link-active">
+              {{ item.productCategoryTitle }}</a>
+
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']" dideo-checked="true">پروژه ها</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" dideo-checked="true">پژوهش
+            ها و رویدادها</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown07">
+            <a class="dropdown-item" [routerLink]="['/news']" dideo-checked="true">اخبار</a>
+            <a class="dropdown-item" href="#" dideo-checked="true">مقالات</a>
+            <a class="dropdown-item" href="#" dideo-checked="true">دانلود ها</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']" dideo-checked="true">سفارش محصول </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contactus']" dideo-checked="true">تماس با ما </a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-md-0">
+        <div class="form-group has-search">
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="text" class="form-control" placeholder="جستجو">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</nav>
+

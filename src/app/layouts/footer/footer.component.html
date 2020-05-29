@@ -1,46 +1,105 @@
-<footer>
-  <div class="row row1">
-    <div class="centrado">
-      <div class="col-xs-6 column">
-        <p class="title">
-          اطلاعات
-        </p>
-
-        <ul class="footerLink">
-          <li>- <a [routerLink]="['/news']" title="News">اخبار</a></li>
-          <li>- <a [routerLink]="['/about']" title="Company">درباره ما</a></li>
+<!-- Footer -->
+<section id="footer">
+  <div class="container">
+    <div class="row text-center text-xs-center text-sm-left text-md-left">
+      <div class="col-xs-12 col-sm-6 col-md-6 text-center">
+        <h2>تماس با ما</h2>
+        <ul class="list-unstyled quick-links">
           <li>
-            - <a [routerLink]="['/contactus']" title="Contact">تماس با ما</a>
+            <a href="#">
+              <i class="fa fa-home" aria-hidden="true"></i> تهران-
+              خیابان بهار شمالی- کوچه هاله- پلاک 13 واحد 6
+            </a>
+
           </li>
-          <li>- <a href="#" title="Contact">نقشه سایت</a></li>
+          <li>
+            <a href="#">
+              <i class="fa fa-mobile" aria-hidden="true"></i> موبایل:
+              +989195140523
+            </a>
+          </li>
+          <li>
+            <a href="#">
+            <i class="fa fa-phone" aria-hidden="true"></i> تلفن:
+            +982177659174
+            </a>
+          </li>
+          <li>
+            <a href="#">
+            <i class="fa fa-envelope" aria-hidden="true"></i> ایمیل:
+            info@nrugroup.ir
+            </a>
+          </li>
+          <li>
+            <a href="#">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            اینستاگرام:
+            utab.lighting
+            </a>
+          </li>
         </ul>
       </div>
 
-      <div class="col-xs-6 column">
-        <p class="title none">تماس با ما</p>
-        <div class="adress5">
-          تهران- خیابان بهار شمالی- کوچه هاله- پلاک 13 واحد 6
-        </div>
-        <br />
-        <div class="phone1">
-          موبایل: <span dir="ltr">+989195140523</span>
-          <br />
-          تلفن: <span dir="ltr">+982177659174</span>
-          <br />
-          ایمیل: <span dir="ltr">info@nrugroup.ir</span>
-          <br />
-          اینستاگرام:
-          <span dir="ltr"
-            ><a target="_blank" href="https://www.instagram.com/utab.lighting/">
-              utab.lighting
-            </a></span
-          >
-          <br />
-        </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 text-center">
+        <h2>اطلاعات</h2>
+        <ul class="list-unstyled quick-links">
+          <li>
+            <a [routerLink]="['/news']">
+              <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+              اخبار
+            </a>
+          </li>
+          <li><a [routerLink]="['/about']"><i class="fa fa-user-o"></i> درباره ما</a>
+          </li>
+          <li>
+            <a [routerLink]="['/contactus']"><i class="fa fa-phone"></i> تماس با ما</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-sitemap"></i> نقشه سایت</a>
+          </li>
+
+        </ul>
       </div>
     </div>
-  </div>
-  <!-- end row1 -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+        <ul class="list-unstyled list-inline social text-center">
+          <li class="list-inline-item">
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.instagram.com/utab.lighting/" target="_blank">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" target="_blank">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
 
-  <!-- end row2 -->
-</footer>
+        <p class="h6">
+          © All right Reversed.<a class="text-green ml-2" href="http://www.nrugroup.ir" target="_blank">NruGroup</a>
+        </p>
+      </div>
+      <hr>
+    </div>
+  </div>
+</section>
+<!-- ./Footer -->

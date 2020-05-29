@@ -1,147 +1,82 @@
 <my-content placeholder="main">
-  <DIV class="centrado">
-    <div id="div_contacto">
-      <h1>تماس با ما</h1>
-      <div class="formulario">
-        <h2 id="resposta">
-          Your details have been sent successfully. <br />
-          <span>They will be dealt with shortly. Thank you.</span>
-        </h2>
-        <form method="post" class="row">
-          <div class="columna_1 col-sm-12 col-md-12">
-            <div class="direccion">
-              تهران- خیابان بهار شمالی- کوچه هاله- پلاک 13 واحد 6<br />
-              موبایل:
-              <span dir="ltr">+989195140523</span>
-              <br />
-              تلفن: <span dir="ltr">+982177659174</span>
-              <br />
-              ایمیل: <span dir="ltr">info@nrugroup.ir</span>
-              <br />
-              اینستاگرام:
-              <span dir="ltr">
-                <a
-                  target="_blank"
-                  href="https://www.instagram.com/utab.lighting/"
-                >
-                  utab.lighting
-                </a>
-              </span>
-            </div>
-            <div class="dreta1">
-              <label>
-                <mat-form-field class="example-full-width">
-                  <mat-label>نام</mat-label>
-                  <input
-                    name="name"
-                    type="text"
-                    id="firstName"
-                    maxlength="50"
-                    width="100%"
-                    autocomplete="off"
-                    placeholder="سعید"
-                    required
-                    matInput
-                  />
-                </mat-form-field>
-              </label>
-              <label>
-                <mat-form-field class="example-full-width">
-                  <mat-label>نام خانوادگی</mat-label>
-                  <input
-                    name="lastName"
-                    type="text"
-                    id="lastName"
-                    maxlength="50"
-                    class="camp"
-                    autocomplete="off"
-                    placeholder="مرادی "
-                    required
-                    matInput
-                  />
-                </mat-form-field>
-              </label>
-              <label>
-                <mat-form-field class="example-full-width">
-                  <mat-label>ایمیل</mat-label>
-                  <input
-                    name="email"
-                    type="email"
-                    id="Email"
-                    maxlength="50"
-                    class="camp"
-                    autocomplete="off"
-                    placeholder="test@nrugroup.ir"
-                    required
-                    matInput
-                  />
-                </mat-form-field>
-              </label>
-              <label>
-                <mat-form-field class="example-full-width">
-                  <mat-label>موبایل</mat-label>
-                  <input
-                    name="phone"
-                    type="text"
-                    id="CellPhone"
-                    maxlength="20"
-                    class="camp"
-                    autocomplete="off"
-                    placeholder="09121234567"
-                    required
-                    matInput
-                  />
-                </mat-form-field>
-              </label>
-              <label>
-                <mat-form-field class="example-full-width">
-                  <mat-label>پیام شما</mat-label>
-                  <textarea
-                    name="description"
-                    id="Comentaris"
-                    cols="10"
-                    rows="5"
-                    class="area"
-                    autocomplete="off"
-                    placeholder="پیام شما"
-                    required
-                    matInput
-                  ></textarea>
-                </mat-form-field>
-              </label>
-              <label>
-                <div
-                  class="g-recaptcha"
-                  data-sitekey="6Le-UOkUAAAAAGk9_x0gpP6J2o1T4lP6y2uihuiX"
-                ></div>
-              </label>
-            </div>
-          </div>
+  <div class="card" dir="rtl" style="text-align: right;padding: 10px;">
+    <div class="card-header" id="headingOne">
+      <h3 class="mb-0">
 
-          <div class="columna_2 col-sm-6 col-md-6">
-            <input name="Send" type="submit" id="Send" value="ارسال" />
-            <!-- <div
-              class="g-recaptcha"
-              data-sitekey="6LdVdOcUAAAAABb89DrKOYdHD_1z3xohI2dAIYGL"
-            ></div> -->
+        تماس با ما
+
+      </h3>
+    </div>
+
+
+    <div class="card-body">
+
+
+      <form method="post">
+
+        <div class="row">
+          <div class="col">
+
+            <mat-form-field class="example-full-width">
+              <mat-label>نام</mat-label>
+              <input name="name" type="text" id="firstName" maxlength="50" width="100%" autocomplete="off"
+                placeholder="سعید" required matInput />
+            </mat-form-field>
           </div>
-        </form>
-        <div class="clear"></div>
-        <div class="loading">
-          <img src="../../src/img/content/loading.gif" id="loading" />
+          <div class="col">
+            <mat-form-field class="example-full-width">
+              <mat-label>نام خانوادگی</mat-label>
+              <input name="lastName" type="text" id="lastName" maxlength="50" class="camp" autocomplete="off"
+                placeholder="مرادی " required matInput />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="example-full-width">
+              <mat-label>ایمیل</mat-label>
+              <input name="email" type="email" id="Email" maxlength="50" class="camp" autocomplete="off"
+                placeholder="test@nrugroup.ir" required matInput />
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="example-full-width">
+              <mat-label>موبایل</mat-label>
+              <input name="phone" type="text" id="CellPhone" maxlength="20" class="camp" autocomplete="off"
+                placeholder="09121234567" required matInput />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>پیام شما</mat-label>
+          <textarea name="description" id="Comentaris" cols="10" rows="5" class="area" autocomplete="off"
+            placeholder="پیام شما" required matInput></textarea>
+        </mat-form-field>
+
+
+
+        <div class="row">
+          <div class="col text-center">
+            <button id="send" class="btn btn-primary" type="submit">ارسال</button>
+            <!-- <div
+                    class="g-recaptcha"
+                    data-sitekey="6LdVdOcUAAAAABb89DrKOYdHD_1z3xohI2dAIYGL"
+                  ></div> -->
+          </div>
+        </div>
+      </form>
+      <br>
+      <div class="row">
+        <div class="col">
+
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.4551461518504!2d51.4300313156127!3d35.71502333572455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQyJzU0LjEiTiA1McKwMjUnNTYuMCJF!5e0!3m2!1sen!2sus!4v1588426490406!5m2!1sen!2sus"
+            width="100%" height="360" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
         </div>
       </div>
-
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.4551461518504!2d51.4300313156127!3d35.71502333572455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQyJzU0LjEiTiA1McKwMjUnNTYuMCJF!5e0!3m2!1sen!2sus!4v1588426490406!5m2!1sen!2sus"
-        width="940"
-        height="360"
-        frameborder="0"
-        style="border: 0;"
-        allowfullscreen=""
-        aria-hidden="false"
-        tabindex="0"
-      ></iframe>
     </div>
-  </DIV>
+  </div>
 </my-content>

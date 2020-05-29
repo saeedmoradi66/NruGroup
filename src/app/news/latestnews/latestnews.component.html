@@ -1,13 +1,14 @@
-<div id="div_articulos" class="list">
-  <h5>آخرین خبر ها</h5>
-  <ul>
 
-    <LI *ngFor="let news of NewsList">
-      <A title="{{news.title}}"  [routerLink]="['/details',news.newsId]" routerLinkActive="router-link-active"  >
-        {{news.newsPersianDate}}<BR>
-        <SPAN>{{news.title}}</SPAN>
-      </A>
-    </LI>
-
+  <h3>آخرین خبر ها</h3>
+  
+  <ul class="nav nav-pills flex-column text-right">
+    <li class="nav-item" *ngFor="let news of NewsList">
+    <a title="{{news.title}}" [routerLink]="['/details',news.newsId]" routerLinkActive="router-link-active">
+      
+      <span>{{news.title}}</span>
+      </a>
+      <hr>
+    </li>
+    
   </ul>
-</div>
+
