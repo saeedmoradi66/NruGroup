@@ -1,11 +1,11 @@
 <my-content placeholder="main">
     <div class="card" dir="rtl" style="text-align: right;padding: 10px;">
         <div class="card-header" id="headingOne" *ngIf="productDetails!=null">
-            <h3 class="mb-0">
 
-                NRU-{{productDetails.product.productTitle}}
+            <div style="float: right;"> {{productDetails.product.productCategory.productCategoryTitle}} / </div> 
+            <div style="float: right;"> NRU-{{productDetails.product.productTitle}}</div>
 
-            </h3>
+
         </div>
         <div class="card-body">
 
@@ -160,7 +160,7 @@
                             <div class="row justify-content-center">
                                 <a
                                     href="../../assets/img/products/{{productDetails.product.productCategory.folderName}}/{{productDetails.product.productTitle}}/{{productDetails.catalogName}}">
-                                    <img src="../../assets/img/pdf.png" /> دانلود دیتاشیت
+                                    <img src="../../assets/img/pdf.png" /> دانلود کاتالوگ
                                 </a>
                             </div>
                         </div>
@@ -172,13 +172,17 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-12 text-center">
+                        <div class="col-sm-6 text-center">
                             <img class="img-fluid"
                                 src='../../assets/img/products/{{productDetails.product.productCategory.folderName}}/{{productDetails.product.productTitle}}/{{productDetails.picAddress}}'>
                         </div>
+                        <div class="col-sm-6 text-center">
+                            <img class="img-fluid"
+                                src='../../assets/img/products/{{productDetails.product.productCategory.folderName}}/{{productDetails.product.productTitle}}/{{productDetails.picAddress2}}'>
+                        </div>
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>

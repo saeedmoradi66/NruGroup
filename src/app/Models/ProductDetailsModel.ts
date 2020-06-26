@@ -3,6 +3,7 @@ import { Products } from './ProductsModel';
 export class ProductDetailsModel {
     productDetailsID: number;
     picAddress: string;
+    picAddress2: string;
     title: string;
     typeTitle: string;
     brand: string;
