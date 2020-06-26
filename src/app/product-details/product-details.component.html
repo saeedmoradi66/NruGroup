@@ -2,7 +2,8 @@
     <div class="card" dir="rtl" style="text-align: right;padding: 10px;">
         <div class="card-header" id="headingOne" *ngIf="productDetails!=null">
 
-            <div style="float: right;"> {{productDetails.product.productCategory.productCategoryTitle}} / </div> 
+            <div style="float: right;"> {{productDetails.product.productCategory.productCategoryTitle | replace : 'های' : ' '}}
+                مدل </div>
             <div style="float: right;"> NRU-{{productDetails.product.productTitle}}</div>
 
 

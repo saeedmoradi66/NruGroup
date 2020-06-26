@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatInputModule } from '@angular/material/input';
 import { ProductCategoryComponent } from './product-category/product-category.component';
+import { ReplacePipe } from './pipes/replace.pipe';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ProductCategoryComponent } from './product-category/product-category.co
     ProductDetailsComponent,
     SpinnerComponent,
     ProductCategoryComponent,
+    ReplacePipe
   ],
   imports: [
     
